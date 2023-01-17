@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import ImagSlider from "./ImagSlider";
 
-function App() {
-  const [count, setCount] = useState(0)
+const slider = [
+  {
+    url: "http://localhost:5173/1.jpg",
+    title: "We Providing landscaping Services Since 1947",
+    dis: " Landscape design is much more than simply planting a few trees and shrubs around your property",
+  },
+  {
+    url: "http://localhost:5173/2.jpg",
+    title: "We Are Allround Certified & Insured landscapers",
+    dis: " Simply planting a few trees and shrubs around your property",
+  },
+  {
+    url: "http://localhost:5173/3.jpg",
+    title: "Extend Your Home With a Beautiful Garden",
+    dis: "By creating an outdoor environment, you are essentially building rooms that are ",
+  },
+];
 
+const style = {
+  width: "700px",
+  height: "500px",
+  margin: "0 auto",
+};
+const App = () => {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div style={style}>
+      <ImagSlider slider={slider} />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
